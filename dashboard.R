@@ -1,7 +1,14 @@
+#переменные: ID студента, lecture - код лекции, events - действие с лекцией, time_spent - время
 HSE <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/HSE.csv", header = TRUE, sep = ";")
+#ID студентов и сумма всех действий на платформе (своего рода общая активность)
 students <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/students.csv", header = TRUE, sep = ";")
+# ID лекций, события, сколько раз просматривалась, сколько раз скачивалась (датасет содержит самые популярные видеолекции)
 load_play <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/load_play.csv", header = TRUE, sep = ";")
+# ID Лекций, число problem_check (самые "проблемные" лекции)
 problem_video <- read.csv("https://github.com/IgorMoscow/HSE.test/blob/master/problem_videos.csv", header = TRUE, sep = ";")
+
+viewers <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/viewers.csv", header = TRUE, sep = ";")
+
 
 library(shiny)
 library(shinydashboard)
