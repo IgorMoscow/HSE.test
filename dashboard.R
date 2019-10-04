@@ -5,9 +5,15 @@ students <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/mast
 # ID лекций, события, сколько раз просматривалась, сколько раз скачивалась (датасет содержит самые популярные видеолекции)
 load_play <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/load_play.csv", header = TRUE, sep = ";")
 # ID Лекций, число problem_check (самые "проблемные" лекции)
-problem_video <- read.csv("https://github.com/IgorMoscow/HSE.test/blob/master/problem_videos.csv", header = TRUE, sep = ";")
-
+problem_videos <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/problem_videos.csv", header = TRUE, sep = ";")
+# ID студента, events - его действия, n - количество действий с лекциями (общая активность с разбиением на действия
 viewers <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/viewers.csv", header = TRUE, sep = ";")
+
+# верхние инфобоксы показывают число уникальных лекций (как факторов что ли), число уникальных событий
+#левая верхняя диаграмма показывает 20 самых просматриваемых и скачиваемых лекций, правая верхняя - видео, 
+#с которым были любые запросы по проблемам. Фиолетовая таблица отображает события и их число, связанные с работой студента, 
+#вбитого в инпут. Инфобокс слева от нее - отображает айди, вбитое в текстинпут. 
+#например:ID 10031, play_video - 56, pause_video - 40  и тд 
 
 
 library(shiny)
