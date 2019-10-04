@@ -1,6 +1,11 @@
+HSE <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/HSE.csv", header = TRUE, sep = ";")
+students <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/students.csv", header = TRUE, sep = ";")
+load_play <- read.csv("https://raw.githubusercontent.com/IgorMoscow/HSE.test/master/load_play.csv", header = TRUE, sep = ";")
+problem_video <- read.csv("https://github.com/IgorMoscow/HSE.test/blob/master/problem_videos.csv", header = TRUE, sep = ";")
 
 library(shiny)
 library(shinydashboard)
+library(tidyverse)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Report"),
